@@ -92,6 +92,26 @@
 			</div>
 		</article>
 
+		<!--LIST -->
+		<article class="lists">
+			<div class="buttons">
+				<h2> Lists: </h2>
+				<input type="radio" name="list" id="list1" value="1" checked="checked"/>
+				<label for="list1"> List one </label>
+				<br />
+				<input type="radio" name="list" id="list2" value="2" />
+				<label for="list2"> List two </label>
+
+				<input type="text" id="Ivalue" value=""/>
+				<input type="button" id="Irange" value="see list"/>
+				<input type="button" id="Lpush" class="push" value="Add: left"/>
+				<input type="button" id="Lpop" class="pop" value="Remove: left"/>
+				<input type="button" id="Rpush" class="push" value="Add: right"/>
+				<input type="button" id="Rpop" class="pop" value="Remove: right"/>
+			</div>
+			<div class="results" id="rLists"></div>
+		</article>
+
 	</section>
 	<footer>
 		<p> PHP and Redis </p>
