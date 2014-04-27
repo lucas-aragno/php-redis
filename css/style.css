@@ -56,3 +56,49 @@ section{
 	-moz-border-radius:5px;
 	-webkit-border-radius : 5px;
 }
+
+article {
+	display: none;
+	min-height: 160px;
+}
+
+article .buttons{
+	width: 20%;
+	margin: 0 5px;
+	float: left;
+}
+
+article .results{
+	width: 70%;
+	margin: 0 5px;
+	float: left;
+}
+
+footer{
+	clear: both;
+	height: 80px;
+	padding:10px;
+	text-align: center;
+}
+
+footer p{
+	margin: 0 auto;
+	padding: 30px 0;
+	width: 300px;
+
+}
+
+input {
+	margin: 2px 0;
+}
+
+input[type = "button"]{
+	margin: 5px 0;
+	min-width: 146px;
+}
+
+label {
+	display: inline-block;
+	min-width: 75px;
+}
+
