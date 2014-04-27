@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> PHP and Redis </title>
+		<link type = "text/css" href = "css/style.css" rel = "stylesheet" />
+		<script type = "text/javascript" src = "http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script type = "text/javascript" src = "js/jquery.form.js"></script>
+		<script type = "text/javascript" src = "js/redis.js"></script>
+
+		<!--[ if lt IE9] >
+			<script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<![endif] -->
+	</head>
+	<body>
+	<header>
+		<h1> How to use PHP and Redis </h1>
+	</header>
+	<nav>
+		<ul>
+			<li id="server"> Server </li>
+			<li id="strings"> Strings </li>
+			<li id="hashes"> Hashes </li>
+			<li id="lists"> Lists </li>
+			<li id="sets"> Sets </li>
+			<li id="sorted_sets"> Sorted Sets </li>
+		</ul>
+	</nav>
+	<section>
+		<!-- SERVER -->
+		<article class="server">
+			<div class="buttons">
+				<h2> Server: </h2>
+				<input type="button" id="info" value="info about the server"/>
+				<input type="button" id="save" value="Store to harddrive"/>
+				<input type="button" id="lastSave" value="last save"/>
+				<input type="button" id="dbSize" value="keys amount"/>
+				<input type="button" id="flush" value="erase database"/>
+			</div>
+			<div class="results" id="rServer"></div>
+		</article>
+
+		<!-- STRING -->
+		<article class="string">
+			<div class="buttons">
+				<h2> Strings: </h2>
+				<input type="radio" name="user" id="user1" value="1" checked="checked"/>
+				<label for="user1"> ID:1 Lucas </label>
+				<input type="radio" name="user" id="user2" value="2"/>
+				<label for="user2"> ID:2 Winston </label>
+				<input type="radio" name="user" id="user3" value="3" />
+				<label for="user3"> ID:3 Holden </label>
+				<input type="radio" name="user" id="user4" value="4" />
+				<label for="user4"> ID:4 Fany </label>
+
+				<input type="button" class="serverKey" value="see key"/>
+				<input type="button" class="sIncrDecr" value="+10"/>
+				<input type="button" class="sIncrDecr" value="+1"/>
+				<input type="button" class="sIncrDecr" value="-1"/>
+				<input type="button" class="sIncrDecr" value="-10"/>
+
+				<form enctype="multipart/form-data" id="sUploadImageForm">
+					<input type="file" name="image"/>
+					<input type="submit" id="sUploadImage" value="Upload"/>
+				</form>
+			</div>
+			<div class="results" id="rStrings"></div>
+		</article>
+
+		<!-- HASH -->
+		<article class="hashes">
+			<div class="buttons">
+				<h2> client's hashes: </h2>
+				<input type="button" id="aClient" value="Import clients"/>
+
+				<input type="button" id="bClient" value="Search"/>
+				<input type="text" id="bClientId" value=""/>
+
+				<input type="button" id="mClient" value="Modify"/>
+				<input type="button" id="vClient" value="Visit"/>
+				<input type="button" id="dClient" value="Delete"/>
+			</div>
+			<div class="results" id="rHashes"></div>
+				<p id="keyclient"><b>Client: </b> </p>
+				<label for="clientname"> Name</label>
+				<input type="text" id="clientname" value="" />
+				<label for="clientlastname"> Last Name</label>
+				<input type="text" id="clientlastname" value="" />
+				<label for="clientemail"> Email</label>
+				<input type="text" id="clientemail" value="" />
+				<label for="clientvisits"> Visits</label>
+				<input type="text" id="clientvisits" value="" readonly="readonly"/>
+			</div>
+		</article>
+
+	</section>
+	<footer>
+		<p> PHP and Redis </p>
+	</footer>
+	</body>
+</html>
