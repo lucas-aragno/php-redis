@@ -14,5 +14,13 @@
 	function showOutput($command){
 		return "<b> Command: </b> {$command} <br /><pre>";
 	}
+	switch ($action) {
+		case 'getInfo':
+			echo showOutput('$redis -> info();');
+			print_r($redis -> info());
+			echo '</pre>';
+			break;
+		
+	}
 
 ?>
