@@ -6,7 +6,7 @@ define ('DB',0);
 
 try{
 	$redis = new Redis();
-	$redis -> connect(HOST,PUERTO);
+	$redis -> connect(HOST,PORT);
 	$redis -> select(DB);
 } catch (Exception $e){
 	die('ERROR'.$e -> getCode().':'.$e -> getMessage());
